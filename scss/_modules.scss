@@ -1,0 +1,92 @@
+@use 'variables' as*;
+@use 'mixin' as *;
+
+// セクションの見出し
+.section-head{
+    margin-bottom: 96px;
+    @include mq(sp){
+            margin-bottom: 48px;
+        }
+    &__ja{
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 600;
+
+        // @media screen and (max-width: 767px){
+        //     font-size: 14px;
+        // }
+
+        @include mq(sp){
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+    }
+
+    &--brown{
+        color: $mainColor1;
+    }
+
+    &--white{
+        color: $textColor2;
+    }
+}
+
+
+.nav{
+    &-menu{
+        display: flex;
+        column-gap: 32px;
+        align-items: center;
+    }
+}
+
+// インスタグラムのアイコン
+.fa-instagram{
+    font-size: 24px;
+}
+
+// ボタン
+.btn{
+    display: flex;
+    width: 217px;
+    height: 48px;
+    border-radius: 4px;
+    font-family: $sans;
+    align-items: center;
+    justify-content: center;
+
+    .fa-envelope{
+        font-size: 16px;
+    }
+
+    &--fill{
+        background-color: $mainColor1;
+        color: $textColor2;
+    }
+
+    &--stroke{
+        border: 2px solid $mainColor1;
+        color: $mainColor1;
+    }
+}
+
+// ソーシャルアイコン
+.social-icons{
+    display: flex;
+    column-gap: 16px;
+
+    .social-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: $accentColor;
+
+        &__icon{
+            color: $textColor2;
+            font-size: 24px;
+        }
+    }
+}

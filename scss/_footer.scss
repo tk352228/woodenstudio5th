@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+.footer{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 32px;
+    background-color: $baseColor2;
+
+    .nav{
+        margin-bottom: 24px;
+    }
+
+    .privacy-link{
+        display: block;
+        margin-bottom: 80px;
+    }
+
+    &__logo{
+        width: 166px;
+        margin-bottom: 80px;
+    }
+
+    &__copyright{
+        color: $mainColor1;
+    }
+}

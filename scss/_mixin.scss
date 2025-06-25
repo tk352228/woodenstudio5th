@@ -1,0 +1,24 @@
+// map：複数の設定をまとめたもの
+// $breakpoints:(
+//     'sp':'screen and (max-width: 599px)',
+//     'tab':'screen and (max-width: 1024px)',
+//     'pc':'screen and (min-width: 1025px)',
+// );
+
+// @mixin mq($size){
+//     @media #{map-get($breakpoints, $size)}{
+//         @content
+//     }
+// }
+
+$breakpoints:(
+    'sp':'screen and (max-width: 599px)',
+    'tab':'screen and (max-width: 1024px)',
+    'pc':'screen and (min-width: 599px)',
+);
+
+@mixin  mq($size){
+    @media #{map-get($breakpoints, $size)}{
+        @content
+    }
+}
